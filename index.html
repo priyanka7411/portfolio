@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <img src="logo img.png"  class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>BCA Student</p>
+                <h1>Hi,I'm <span>Priyanka</span> <br>From Hubli</h1>
+            </div>
+
+        </div>
+
+    </div>
+    <!-----------about------------->
+    <div id="about">
+        <div id="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="background.jpeg" >
+                </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Iam priyanka Malavade from Chigalli.Iam currently pursuing my BCA  degree at Oxford College.Passionate about technology and it's transformative potential,Iam dedicated to expanding my knowledge and skills in the dynamic field of computer science. </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>BCA </span><br>Student</li>
+                                <li><span>Web Developmen</span><br>Web App Development</li>
+                                <li><span> Programming Languages </span><br>c,dsa,python,java,html,js,css,php<li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>BCA </span><br>Fresher</li>
+                                <li><span>BCA Senior</span><br>Second Year</li>
+                                <li><span> BCA Supersenior</span><br>Third Year<li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>SSLC </span><br>Loyola Kendriya Vidyalaya</li>
+                                <li><span>PUC</span><br>MES Chaitanya</li>
+                                <li><span> Degree</span><br>Oxford College<li>
+                            </ul>
+                        </div>
+                    </div>
+            
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--------------contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>123456789</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Priyanka. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+                if (tablink.innerText === tabname) {
+                    tablink.classList.add("active-link");
+                }
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+                if (tabcontent.id === tabname) {
+                    tabcontent.classList.add("active-tab");
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
